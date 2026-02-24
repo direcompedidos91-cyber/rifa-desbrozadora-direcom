@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Rifa DIRECOM | Carreta Tornado + Desbrozadora Bellota</title>
+  <meta name="description" content="Compra 2 carretas Tornado y participa en la rifa de una desbrozadora Bellota. Vigencia del 1 al 30 de marzo." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="container topbar__inner">
+      <div class="brand">
+        <img class="brand__logo" src="assets/logo_direcom.png" alt="Logo DIRECOM" />
+      </div>
+      <a class="btn btn--ghost" href="#participar">Participar</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero__grid">
+        <div class="hero__copy">
+          <div class="pill">PROMOCIÓN • Vigencia: <b>1–30 de marzo</b></div>
+          <h1>Doble fuerza <span class="accent">Tornado</span> — Gana con <span class="accent2">Bellota</span></h1>
+          <p class="lead">
+            Por la compra de <b>2 carretas Tornado</b> participas en la rifa de una <b>desbrozadora Bellota</b>.
+            El sorteo será <b>EN VIVO</b> en nuestras redes sociales.
+          </p>
+
+          <div class="countdown" aria-label="Conteo regresivo">
+            <div class="cd__box"><div id="cdDays" class="cd__num">--</div><div class="cd__lbl">Días</div></div>
+            <div class="cd__box"><div id="cdHours" class="cd__num">--</div><div class="cd__lbl">Horas</div></div>
+            <div class="cd__box"><div id="cdMins" class="cd__num">--</div><div class="cd__lbl">Min</div></div>
+            <div class="cd__box"><div id="cdSecs" class="cd__num">--</div><div class="cd__lbl">Seg</div></div>
+          </div>
+
+          <div class="hero__cta">
+            <a class="btn" href="#participar">Registrar participación</a>
+            <a class="btn btn--secondary" href="#ver-en-vivo">Ver sorteo en vivo</a>
+          </div>
+
+          <div class="fineprint">
+            *Promoción válida del <b>1 al 30 de marzo</b>. Participación válida únicamente con factura.
+          </div>
+        </div>
+
+        <div class="hero__art">
+          <div class="card card--img">
+            <div class="card__title">Carreta Tornado</div>
+            <img src="assets/carreta_tornado.png" alt="Carreta Tornado" />
+            <div class="badge">4.5 pies</div>
+          </div>
+
+          <div class="card card--img">
+            <div class="card__title">Premio: Desbrozadora Bellota</div>
+            <img src="assets/desbrozadora_bellota.jpg" alt="Desbrozadora Bellota" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="how">
+      <div class="container">
+        <h2>¿Cómo participar?</h2>
+        <div class="steps">
+          <div class="step"><div class="step__num">1</div><div class="step__txt"><b>Compra 2 carretas Tornado</b> (vigencia 1–30 de marzo).</div></div>
+          <div class="step"><div class="step__num">2</div><div class="step__txt">Escanea el QR y <b>síguenos en redes</b> para ver el en vivo del sorteo.</div></div>
+          <div class="step"><div class="step__num">3</div><div class="step__txt">Registra tus datos aquí y conserva tu <b>factura</b>.</div></div>
+          <div class="step"><div class="step__num">4</div><div class="step__txt">El <b>30 de marzo</b> haremos la rifa <b>EN VIVO</b> en redes.</div></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="participar" class="formsec">
+      <div class="container formsec__grid">
+        <div class="formcard">
+          <h2>Registro de participación</h2>
+          <p class="muted">Llena el formulario. Al finalizar, se abrirá WhatsApp con el mensaje listo para enviarlo. (Luego adjunta foto de tu factura en el chat).</p>
+
+          <form id="rifaForm">
+            <div class="field">
+              <label>Nombre completo</label>
+              <input required name="nombre" placeholder="Ej: Juan Pérez" />
+            </div>
+
+            <div class="fieldrow">
+              <div class="field">
+                <label>DNI / RTN</label>
+                <input required name="id" placeholder="Ej: 0801-xxxx-xxxxx" />
+              </div>
+              <div class="field">
+                <label>Teléfono</label>
+                <input required name="tel" placeholder="Ej: 9xxx-xxxx" />
+              </div>
+            </div>
+
+            <div class="fieldrow">
+              <div class="field">
+                <label>Ciudad</label>
+                <input required name="ciudad" placeholder="Ej: San Pedro Sula" />
+              </div>
+              <div class="field">
+                <label>Ferretería / Punto de compra</label>
+                <input required name="punto" placeholder="Ej: Ferretería ABC" />
+              </div>
+            </div>
+
+            <div class="fieldrow">
+              <div class="field">
+                <label>No. Factura</label>
+                <input required name="factura" placeholder="Ej: F-001234" />
+              </div>
+              <div class="field">
+                <label>Fecha de compra</label>
+                <input required type="date" name="fecha" />
+              </div>
+            </div>
+
+            <div class="check">
+              <input id="bases" type="checkbox" required />
+              <label for="bases">Acepto las bases de la promoción (ver abajo).</label>
+            </div>
+
+            <button class="btn btn--full" type="submit">Enviar registro por WhatsApp</button>
+          </form>
+        </div>
+
+        <aside class="sidecard" id="ver-en-vivo">
+          <h3>Ver sorteo EN VIVO</h3>
+          <p class="muted">Escanea el QR para seguir nuestras redes. Ahí publicaremos el enlace del en vivo.</p>
+          <img class="qr" src="assets/qr_redes.png" alt="QR Redes DIRECOM" />
+          <a class="btn btn--secondary btn--full" id="btnRedes" href="#" target="_blank" rel="noopener">Abrir redes</a>
+
+          <div class="divider"></div>
+
+          <h4>Datos del sorteo</h4>
+          <ul class="list">
+            <li><b>Premio:</b> Desbrozadora Bellota</li>
+            <li><b>Vigencia:</b> 1–30 de marzo</li>
+            <li><b>Requisito:</b> Compra de 2 carretas Tornado</li>
+            <li><b>Transmisión:</b> En redes oficiales DIRECOM</li>
+          </ul>
+        </aside>
+      </div>
+    </section>
+
+    <section class="bases">
+      <div class="container">
+        <h2>Bases rápidas</h2>
+        <div class="bases__grid">
+          <div class="bases__box"><b>Vigencia:</b> del 1 al 30 de marzo.</div>
+          <div class="bases__box"><b>Participación:</b> válida con factura por compra de 2 carretas Tornado.</div>
+          <div class="bases__box"><b>Sorteo:</b> se realiza EN VIVO el 30 de marzo en redes oficiales DIRECOM.</div>
+          <div class="bases__box"><b>Validación:</b> DIRECOM puede solicitar foto de factura y datos del comprador.</div>
+          <div class="bases__box"><b>Premio:</b> no canjeable por efectivo y no transferible.</div>
+          <div class="bases__box"><b>Territorio:</b> promoción válida en Honduras.</div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <img class="footer__logo" src="assets/logo_direcom.png" alt="DIRECOM" />
+      <div class="muted">© <span id="year"></span> • Servicio y calidad.</div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
