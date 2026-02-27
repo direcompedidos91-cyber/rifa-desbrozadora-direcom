@@ -2,7 +2,7 @@
 const CONFIG = {
   redesUrl: "https://instagram.com/DIRECOMHN",
   // CAMBIAR por el número real de WhatsApp DIRECOM (formato 504xxxxxxxx)
-  whatsappDestino: "50400000000",
+  whatsappDestino: "+50497138531",
   // Sorteo EN VIVO: 30 de marzo, 6:00 pm (Honduras -06:00)
   sorteoFechaISO: "2026-03-30T18:00:00-06:00",
   campaña: "Rifa Carreta Tornado + Desbrozadora Bellota"
