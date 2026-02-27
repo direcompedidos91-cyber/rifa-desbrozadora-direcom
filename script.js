@@ -1,13 +1,11 @@
 // CONFIGURACIÓN RÁPIDA (vigencia 1–30 de marzo)
 const CONFIG = {
   redesUrl: "https://instagram.com/DIRECOMHN",
-  // CAMBIAR por el número real de WhatsApp DIRECOM (formato 504xxxxxxxx)
-  whatsappDestino: "+50497138531",
-  // Sorteo EN VIVO: 30 de marzo, 6:00 pm (Honduras -06:00)
+  whatsappDestino: "50497138531",
   sorteoFechaISO: "2026-03-30T18:00:00-06:00",
-  campaña: "Rifa Carreta Tornado + Desbrozadora Bellota"
+  campaña: "Rifa Carreta Tornado + Desbrozadora Bellota",
+  googleScriptUrl: "https://script.google.com/macros/s/AKfycbyC9n3tCUDu1ZBdkNGHVTgybJnnhG5RpmOPhg7jFk5Va4fbbzijCExyVbTFmJMKO9TUMQ/exec"
 };
-
 const pad = (n) => String(n).padStart(2, "0");
 
 function startCountdown(){
@@ -54,7 +52,19 @@ Fecha: ${data.get("fecha")}
 Adjunto foto de la factura en este chat. Gracias.`;
 
     const url = `https://wa.me/${CONFIG.whatsappDestino}?text=${encodeURIComponent(msg)}`;
-    window.open(url, "_blank");
+   const params = new URLSearchParams({
+  action: "register",
+  nombre,
+  id,
+  tel,
+  ciudad,
+  punto,
+  factura,
+  fecha
+});
+
+// Envía a Google Script (ahí se guarda en Sheets y te confirma)
+window.location.href = `${CONFIG.googleScriptUrl}?${params.toString()}`;
   });
 }
 
